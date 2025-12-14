@@ -3,6 +3,13 @@
 # =========================
 default_config:
 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.16.0.0/12  # Range IP standar Docker
+    - 127.0.0.1      # Localhost
+    - ::1
+
 homeassistant:
   time_zone: Asia/Makassar
 
@@ -61,7 +68,7 @@ input_button:
 # =========================
 rest_command:
   register_rfid:
-    url: "http://host.docker.internal:5000/register"
+    url: "http://backend:5000/register"
     method: POST
     headers:
       Content-Type: application/json
@@ -73,7 +80,7 @@ rest_command:
       }
 
   start_session_manual:
-    url: "http://host.docker.internal:5000/session/start"
+    url: "http://backend:5000/session/start"
     method: POST
     headers:
       Content-Type: application/json
@@ -83,11 +90,11 @@ rest_command:
       }
 
   auto_start_session_d201:
-    url: "http://host.docker.internal:5000/session/auto/d201"
+    url: "http://backend:5000/session/auto/d201"
     method: POST
 
   stop_session:
-    url: "http://host.docker.internal:5000/session/stop"
+    url: "http://backend:5000/session/stop"
     method: POST
 
 # =========================
@@ -96,7 +103,7 @@ rest_command:
 sensor:
   - platform: rest
     name: "Registrasi RFID"
-    resource: "http://host.docker.internal:5000/register/status"
+    resource: "http://backend:5000/register/status"
     value_template: "{{ value_json.status }}"
     json_attributes:
       - message
@@ -108,13 +115,13 @@ sensor:
 
   - platform: rest
     name: "Total Absensi Unik"
-    resource: "http://host.docker.internal:5000/attendance/unique/session"
+    resource: "http://backend:5000/attendance/unique/session"
     value_template: "{{ value_json.total | default(0) }}"
     scan_interval: 5
 
   - platform: rest
     name: "Status Absensi"
-    resource: "http://host.docker.internal:5000/session/status"
+    resource: "http://backend:5000/session/status"
     value_template: >
       {{ 'AKTIF' if value_json.aktif else 'TUTUP' }}
     json_attributes:
@@ -125,7 +132,7 @@ sensor:
 
   - platform: rest
     name: "Daftar Absensi Sesi"
-    resource: "http://host.docker.internal:5000/attendance/list/session"
+    resource: "http://backend:5000/attendance/list/session"
     value_template: "{{ value_json.total }}"
     json_attributes:
       - data

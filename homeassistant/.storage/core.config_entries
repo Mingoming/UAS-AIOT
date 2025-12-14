@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "minor_version": 5,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {"created_at":"2025-12-14T20:07:28.027156+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"shopping_list","entry_id":"01KCF7KA0VKK7RE9QGNP4R5RB9","minor_version":1,"modified_at":"2025-12-14T20:07:28.027159+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","subentries":[],"title":"Shopping list","unique_id":"shopping_list","version":1},
+      {"created_at":"2025-12-14T20:07:28.030521+00:00","data":{"language":"en","tld":"com"},"disabled_by":null,"discovery_keys":{},"domain":"google_translate","entry_id":"01KCF7KA0YHT27NBP50CDYPBSB","minor_version":1,"modified_at":"2025-12-14T20:07:28.030523+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","subentries":[],"title":"Google Translate text-to-speech","unique_id":null,"version":1},
+      {"created_at":"2025-12-14T20:07:28.146344+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"radio_browser","entry_id":"01KCF7KA4JYKEVERQFC3TET357","minor_version":1,"modified_at":"2025-12-14T20:07:28.146347+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","subentries":[],"title":"Radio Browser","unique_id":null,"version":1},
+      {"created_at":"2025-12-14T20:12:24.506223+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"sun","entry_id":"01KCF7WBHT0YZ9F3V0TM8WJ1E6","minor_version":1,"modified_at":"2025-12-14T20:12:24.506225+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"import","subentries":[],"title":"Sun","unique_id":null,"version":1},
+      {"created_at":"2025-12-14T20:12:25.082673+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"go2rtc","entry_id":"01KCF7WC3T5XJVWS665DRQDVEM","minor_version":1,"modified_at":"2025-12-14T20:12:25.082677+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"system","subentries":[],"title":"go2rtc","unique_id":null,"version":1},
+      {"created_at":"2025-12-14T20:12:25.100907+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"backup","entry_id":"01KCF7WC4CRRFRF82P4NGXXX7Y","minor_version":1,"modified_at":"2025-12-14T20:12:25.100911+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"system","subentries":[],"title":"Backup","unique_id":null,"version":1},
+      {"created_at":"2025-12-14T20:18:56.187655+00:00","data":{"broker":"broker.hivemq.com","port":1883},"disabled_by":null,"discovery_keys":{},"domain":"mqtt","entry_id":"01KCF88A1VE3556APRZZGYYFTH","minor_version":2,"modified_at":"2025-12-14T20:18:56.187658+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"user","subentries":[],"title":"broker.hivemq.com","unique_id":null,"version":1}
+    ]
+  }
+}

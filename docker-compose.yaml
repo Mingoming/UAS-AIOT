@@ -8,10 +8,11 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      # Mapping folder lokal backend ke /app di container
+      # Cukup mapping folder utamanya saja.
+      # File DB di dalamnya otomatis ikut terbawa.
       - ./backend:/app
-      # Pastikan DB persist
-      - ./backend/smartcount.db:/app/smartcount.db
+      # Baris dibawah ini HAPUS SAJA:
+      # - ./backend/smartcount.db:/app/smartcount.db
     restart: unless-stopped
     environment:
       - TZ=Asia/Makassar

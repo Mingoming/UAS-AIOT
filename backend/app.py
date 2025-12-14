@@ -359,4 +359,4 @@ def find_student_by_nim(nim):
 if __name__ == "__main__":
     init_db()
     start_mqtt()
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
