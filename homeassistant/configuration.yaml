@@ -1,5 +1,5 @@
 # =========================
-# DEFAULT
+# DEFAULT & HTTP
 # =========================
 default_config:
 
@@ -21,10 +21,11 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 
 # =========================
-# MQTT SENSOR
+# MQTT SENSOR (GABUNGAN)
 # =========================
 mqtt:
   sensor:
+    # --- 1. SENSOR RFID (LAMA) ---
     - name: "RFID Last Scan"
       state_topic: "smartcount/rfid/scan"
       value_template: "{{ value_json.uid }}"
@@ -32,8 +33,41 @@ mqtt:
       state_topic: "smartcount/rfid/scan"
       value_template: "{{ value_json.device }}"
 
+    # --- 2. SENSOR AUDIT KAMERA (BARU) ---
+    - name: "Audit Camera Count"
+      state_topic: "smartcount/audit/result"
+      value_template: "{{ value_json.camera_count }}"
+      icon: mdi:cctv
+
+    - name: "Audit RFID Count"
+      state_topic: "smartcount/audit/result"
+      value_template: "{{ value_json.rfid_count }}"
+      icon: mdi:card-account-details-outline
+
+    - name: "Audit Diff"
+      state_topic: "smartcount/audit/result"
+      value_template: "{{ value_json.diff }}"
+      icon: mdi:calculator
+
+    - name: "Audit Status"
+      state_topic: "smartcount/audit/result"
+      value_template: "{{ value_json.status }}"
+      icon_template: >
+        {% if value_json.status == 'VALID' %}
+          mdi:shield-check
+        {% elif value_json.status == 'ANOMALI' %}
+          mdi:alert-octagon
+        {% else %}
+          mdi:help-circle
+        {% endif %}
+
+    - name: "Audit Timestamp"
+      state_topic: "smartcount/audit/result"
+      value_template: "{{ value_json.timestamp }}"
+      icon: mdi:clock-time-eight-outline
+
 # =========================
-# INPUT
+# INPUT HELPERS
 # =========================
 input_text:
   reg_nim:
@@ -64,7 +98,7 @@ input_button:
     icon: mdi:stop-circle
 
 # =========================
-# REST COMMAND (SATU BLOK SAJA)
+# REST COMMAND
 # =========================
 rest_command:
   register_rfid:
@@ -153,8 +187,12 @@ template:
           {% endif %}
 
 # =========================
-# LOVELACE (DASHBOARD) MODE
+# KAMERA INTEGRASI
+
+
+# =========================
+# LOVELACE MODE
 # =========================
 lovelace:
   mode: yaml
-  resources: [] # Isi ini jika nanti pakai custom cards
+  resources: []

@@ -1,0 +1,6 @@
+flask==3.0.0
+paho-mqtt==1.6.1
+requests==2.31.0
+ultralytics==8.3.27
+opencv-python==4.9.0.80
+numpy<2.0.0

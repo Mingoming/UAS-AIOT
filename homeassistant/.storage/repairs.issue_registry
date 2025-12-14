@@ -3,6 +3,35 @@
   "minor_version": 2,
   "key": "repairs.issue_registry",
   "data": {
-    "issues": []
+    "issues": [
+      {
+        "created": "2025-12-14T21:22:32.996358+00:00",
+        "dismissed_version": "2025.12.3",
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "platform_integration_no_support_camera_mjpeg"
+      },
+      {
+        "created": "2025-12-14T21:22:33.933480+00:00",
+        "dismissed_version": "2025.12.3",
+        "domain": "mqtt",
+        "is_persistent": false,
+        "issue_id": "-0x7e03c3ca159e8652"
+      },
+      {
+        "created": "2025-12-14T22:01:13.353379+00:00",
+        "dismissed_version": null,
+        "domain": "mqtt",
+        "is_persistent": false,
+        "issue_id": "0xc99d43e7d7418b1"
+      },
+      {
+        "created": "2025-12-14T22:32:04.604228+00:00",
+        "dismissed_version": null,
+        "domain": "mqtt",
+        "is_persistent": false,
+        "issue_id": "-0x407718f5d366cb1f"
+      }
+    ]
   }
 }

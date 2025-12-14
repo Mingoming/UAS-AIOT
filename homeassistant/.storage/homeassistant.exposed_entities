@@ -494,6 +494,34 @@
             "should_expose": false
           }
         }
+      },
+      "sensor.audit_camera_count": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
+      },
+      "sensor.audit_rfid_count": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
+      },
+      "sensor.audit_diff": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
+      },
+      "sensor.audit_timestamp": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
       }
     }
   }

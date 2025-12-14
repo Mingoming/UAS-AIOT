@@ -1,6 +1,9 @@
 views:
   - title: Home
     sections:
+      # =========================
+      # 1. MONITORING RFID
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -13,6 +16,10 @@ views:
             entity: sensor.rfid_last_scan
             vertical: true
             features_position: bottom
+
+      # =========================
+      # 2. REGISTRASI MAHASISWA
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -52,6 +59,10 @@ views:
             vertical: false
             features_position: bottom
         column_span: 1
+
+      # =========================
+      # 3. STATUS REGISTRASI
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -72,6 +83,10 @@ views:
             grid_options:
               columns: full
             state_color: false
+
+      # =========================
+      # 4. STATISTIK
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -92,6 +107,10 @@ views:
                 {{ (as_timestamp(strptime(m.waktu, '%Y-%m-%d %H:%M:%S')) + 8*3600)
                      | timestamp_custom('%H:%M') }}
               {% endfor %} {% else %} Belum ada mahasiswa hadir {% endif %}
+
+      # =========================
+      # 5. KONTROL DOSEN
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -107,6 +126,10 @@ views:
             entity: input_button.buka_absensi
           - type: tile
             entity: input_button.tutup_absensi
+
+      # =========================
+      # 6. STATUS SESI
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -124,6 +147,10 @@ views:
           - type: entity
             entity: sensor.jam_mulai_absensi
             name: Jam Mulai Absensi
+
+      # =========================
+      # 7. JADWAL
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -136,6 +163,10 @@ views:
               data %} {% for m in data %} - {{ m.jam_mulai }}–{{ m.jam_selesai
               }} → **{{ m.mata_kuliah }}** {% endfor %} {% else %} Tidak ada
               jadwal hari ini {% endif %}
+
+      # =========================
+      # 8. MODE
+      # =========================
       - type: grid
         cards:
           - type: heading
@@ -147,11 +178,37 @@ views:
             name: Mode Absensi
             grid_options:
               columns: full
+
+      # =========================
+      # 9. AUDIT INTEGRITAS (MODIFIKASI)
+      # =========================
+      - type: grid
+        cards:
+          - type: heading
+            heading: Audit Integritas
+            heading_style: title
+            icon: mdi:security
+
+          # --- LIVE CAMERA FEED (DIPERBESAR) ---
+          - type: picture-entity
+            entity: camera.kamera_audit_d201
+            name: Live Monitoring
+            show_state: false
+            show_name: false
+            camera_view: live
+            grid_options:
+              columns: full
+              rows: 5  # <-- Ditingkatkan dari 3 ke 5 agar gambar BESAR
+
+        
+
+    # =========================
+    # HEADER DASHBOARD
+    # =========================
     header:
       card:
         type: markdown
         content: >-
           # Hello {{ user }}
 
-          Sistem SmartCount untuk Absensi Mahasiswa menggunakan Kartu Tanda
-          Penduduk
+          Sistem SmartCount untuk Absensi Mahasiswa menggunakan Kartu Tanda Penduduk

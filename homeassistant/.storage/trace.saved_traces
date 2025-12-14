@@ -2,5 +2,1152 @@
   "version": 1,
   "minor_version": 1,
   "key": "trace.saved_traces",
-  "data": {}
+  "data": {
+    "automation.auto_buka_absensi_d201": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "7f9492f93264e5316724845ca693ce6c",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:27:00.164619+00:00",
+            "finish": "2025-12-14T22:27:00.172720+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T22:27:00.164685+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.auto_buka_absensi_d201",
+                    "state": "on",
+                    "attributes": {
+                      "id": "auto_buka_absensi_d201",
+                      "last_triggered": "2025-12-14T22:26:00.164157+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Auto Buka Absensi D201"
+                    },
+                    "last_changed": "2025-12-14T22:01:12.673439+00:00",
+                    "last_reported": "2025-12-14T22:26:00.172225+00:00",
+                    "last_updated": "2025-12-14T22:26:00.172225+00:00",
+                    "context": {
+                      "id": "01KCFFGZB3JK2PANRZ36D8S4P8",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-12-15T06:27:00.164448+08:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T22:27:00.164883+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCFFJSY4SFTTWTWV02YT6FMA",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "auto_start_session_d201",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "auto_buka_absensi_d201",
+            "alias": "Auto Buka Absensi D201",
+            "trigger": [
+              {
+                "platform": "time_pattern",
+                "minutes": "/1"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.auto_start_session_d201"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCFFJSY4SFTTWTWV02YT6FMA",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "7f9492f93264e5316724845ca693ce6c",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:27:00.164619+00:00",
+            "finish": "2025-12-14T22:27:00.172720+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "ba789e2f84f8841d4b7f4c8de977f1aa",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:28:00.164284+00:00",
+            "finish": "2025-12-14T22:28:00.172980+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T22:28:00.164350+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.auto_buka_absensi_d201",
+                    "state": "on",
+                    "attributes": {
+                      "id": "auto_buka_absensi_d201",
+                      "last_triggered": "2025-12-14T22:27:00.164780+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Auto Buka Absensi D201"
+                    },
+                    "last_changed": "2025-12-14T22:01:12.673439+00:00",
+                    "last_reported": "2025-12-14T22:27:00.172357+00:00",
+                    "last_updated": "2025-12-14T22:27:00.172357+00:00",
+                    "context": {
+                      "id": "01KCFFJSY4SFTTWTWV02YT6FMA",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-12-15T06:28:00.164152+08:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T22:28:00.164584+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCFFMMH4BKAVMDB5CHFYX9HH",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "auto_start_session_d201",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "auto_buka_absensi_d201",
+            "alias": "Auto Buka Absensi D201",
+            "trigger": [
+              {
+                "platform": "time_pattern",
+                "minutes": "/1"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.auto_start_session_d201"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCFFMMH4BKAVMDB5CHFYX9HH",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "ba789e2f84f8841d4b7f4c8de977f1aa",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:28:00.164284+00:00",
+            "finish": "2025-12-14T22:28:00.172980+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "d887e9a7f9bf5c2739f5b1c6ffadafd7",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:29:00.164522+00:00",
+            "finish": "2025-12-14T22:29:00.173255+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T22:29:00.164594+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.auto_buka_absensi_d201",
+                    "state": "on",
+                    "attributes": {
+                      "id": "auto_buka_absensi_d201",
+                      "last_triggered": "2025-12-14T22:28:00.164452+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Auto Buka Absensi D201"
+                    },
+                    "last_changed": "2025-12-14T22:01:12.673439+00:00",
+                    "last_reported": "2025-12-14T22:28:00.172839+00:00",
+                    "last_updated": "2025-12-14T22:28:00.172839+00:00",
+                    "context": {
+                      "id": "01KCFFMMH4BKAVMDB5CHFYX9HH",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-12-15T06:29:00.164376+08:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T22:29:00.164796+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCFFPF44CM1FAYTPK8AWCWQF",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "auto_start_session_d201",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "auto_buka_absensi_d201",
+            "alias": "Auto Buka Absensi D201",
+            "trigger": [
+              {
+                "platform": "time_pattern",
+                "minutes": "/1"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.auto_start_session_d201"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCFFPF44CM1FAYTPK8AWCWQF",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "d887e9a7f9bf5c2739f5b1c6ffadafd7",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:29:00.164522+00:00",
+            "finish": "2025-12-14T22:29:00.173255+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "7b286aa1ddb6f9ca5234ee9d71d06e2d",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:30:00.164010+00:00",
+            "finish": "2025-12-14T22:30:00.174910+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T22:30:00.164122+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.auto_buka_absensi_d201",
+                    "state": "on",
+                    "attributes": {
+                      "id": "auto_buka_absensi_d201",
+                      "last_triggered": "2025-12-14T22:29:00.164694+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Auto Buka Absensi D201"
+                    },
+                    "last_changed": "2025-12-14T22:01:12.673439+00:00",
+                    "last_reported": "2025-12-14T22:29:00.173138+00:00",
+                    "last_updated": "2025-12-14T22:29:00.173138+00:00",
+                    "context": {
+                      "id": "01KCFFPF44CM1FAYTPK8AWCWQF",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-12-15T06:30:00.163872+08:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T22:30:00.164375+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCFFR9Q3NKM2KS5P4E36AYDA",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "auto_start_session_d201",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "auto_buka_absensi_d201",
+            "alias": "Auto Buka Absensi D201",
+            "trigger": [
+              {
+                "platform": "time_pattern",
+                "minutes": "/1"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.auto_start_session_d201"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCFFR9Q3NKM2KS5P4E36AYDA",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "7b286aa1ddb6f9ca5234ee9d71d06e2d",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:30:00.164010+00:00",
+            "finish": "2025-12-14T22:30:00.174910+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "5510c91418f9bffebd7ed4e654f948d0",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:31:00.164317+00:00",
+            "finish": "2025-12-14T22:31:00.175274+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T22:31:00.164388+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.auto_buka_absensi_d201",
+                    "state": "on",
+                    "attributes": {
+                      "id": "auto_buka_absensi_d201",
+                      "last_triggered": "2025-12-14T22:30:00.164223+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Auto Buka Absensi D201"
+                    },
+                    "last_changed": "2025-12-14T22:01:12.673439+00:00",
+                    "last_reported": "2025-12-14T22:30:00.174736+00:00",
+                    "last_updated": "2025-12-14T22:30:00.174736+00:00",
+                    "context": {
+                      "id": "01KCFFR9Q3NKM2KS5P4E36AYDA",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-12-15T06:31:00.164194+08:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T22:31:00.164598+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCFFT4A438ZK3NPS2VQZM8TW",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "auto_start_session_d201",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "auto_buka_absensi_d201",
+            "alias": "Auto Buka Absensi D201",
+            "trigger": [
+              {
+                "platform": "time_pattern",
+                "minutes": "/1"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.auto_start_session_d201"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCFFT4A438ZK3NPS2VQZM8TW",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "5510c91418f9bffebd7ed4e654f948d0",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T22:31:00.164317+00:00",
+            "finish": "2025-12-14T22:31:00.175274+00:00"
+          },
+          "domain": "automation",
+          "item_id": "auto_buka_absensi_d201",
+          "trigger": "time pattern"
+        }
+      }
+    ],
+    "automation.registrasi_rfid": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "b8417cb8a5f5aace08f3754dbb5252d5",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T20:36:35.267017+00:00",
+            "finish": "2025-12-14T20:36:35.305104+00:00"
+          },
+          "domain": "automation",
+          "item_id": "registrasi_rfid",
+          "trigger": "state of input_button.register_rfid",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T20:36:35.267047+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.registrasi_rfid_mahasiswa",
+                    "state": "on",
+                    "attributes": {
+                      "id": "registrasi_rfid",
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Registrasi RFID Mahasiswa"
+                    },
+                    "last_changed": "2025-12-14T20:32:57.668103+00:00",
+                    "last_reported": "2025-12-14T20:32:57.668103+00:00",
+                    "last_updated": "2025-12-14T20:32:57.668103+00:00",
+                    "context": {
+                      "id": "01KCF91ZT4SDVPM1BF0Q2R5WRT",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "input_button.register_rfid",
+                    "from_state": {
+                      "entity_id": "input_button.register_rfid",
+                      "state": "unknown",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:card-account-details",
+                        "friendly_name": "Daftarkan RFID"
+                      },
+                      "last_changed": "2025-12-14T20:32:57.097114+00:00",
+                      "last_reported": "2025-12-14T20:32:57.097114+00:00",
+                      "last_updated": "2025-12-14T20:32:57.097114+00:00",
+                      "context": {
+                        "id": "01KCF91Z89NPY936PVRKHGZY0T",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "input_button.register_rfid",
+                      "state": "2025-12-14T20:36:35.266741+00:00",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:card-account-details",
+                        "friendly_name": "Daftarkan RFID"
+                      },
+                      "last_changed": "2025-12-14T20:36:35.266784+00:00",
+                      "last_reported": "2025-12-14T20:36:35.266784+00:00",
+                      "last_updated": "2025-12-14T20:36:35.266784+00:00",
+                      "context": {
+                        "id": "01KCF98MA2C5C89EKDKWYC253P",
+                        "parent_id": null,
+                        "user_id": "ec411308942846e6884f542218fb6183"
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of input_button.register_rfid"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-12-14T20:36:35.267072+00:00",
+                "result": {
+                  "result": true,
+                  "entities": [
+                    "sensor.rfid_last_scan"
+                  ]
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T20:36:35.267376+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCF98MA2F20NMX17249BEXZS",
+                    "parent_id": "01KCF98MA2C5C89EKDKWYC253P",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "register_rfid",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "registrasi_rfid",
+            "alias": "Registrasi RFID Mahasiswa",
+            "mode": "single",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "input_button.register_rfid"
+              }
+            ],
+            "condition": [
+              {
+                "condition": "template",
+                "value_template": "{{ states('sensor.rfid_last_scan') not in ['unknown','unavailable','', None] }}\n"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.register_rfid"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCF98MA2F20NMX17249BEXZS",
+            "parent_id": "01KCF98MA2C5C89EKDKWYC253P",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "b8417cb8a5f5aace08f3754dbb5252d5",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T20:36:35.267017+00:00",
+            "finish": "2025-12-14T20:36:35.305104+00:00"
+          },
+          "domain": "automation",
+          "item_id": "registrasi_rfid",
+          "trigger": "state of input_button.register_rfid"
+        }
+      }
+    ],
+    "automation.buka_absensi_manual": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "563441f169d8a54748d2ba8b2d9ac91f",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T20:36:53.537291+00:00",
+            "finish": "2025-12-14T20:36:53.559873+00:00"
+          },
+          "domain": "automation",
+          "item_id": "buka_absensi_manual",
+          "trigger": "state of input_button.buka_absensi",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T20:36:53.537320+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.buka_absensi_kuliah_manual",
+                    "state": "on",
+                    "attributes": {
+                      "id": "buka_absensi_manual",
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Buka Absensi Kuliah (Manual)"
+                    },
+                    "last_changed": "2025-12-14T20:32:57.668203+00:00",
+                    "last_reported": "2025-12-14T20:32:57.668203+00:00",
+                    "last_updated": "2025-12-14T20:32:57.668203+00:00",
+                    "context": {
+                      "id": "01KCF91ZT450009RE32E8ZAEYP",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "input_button.buka_absensi",
+                    "from_state": {
+                      "entity_id": "input_button.buka_absensi",
+                      "state": "unknown",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:play-circle",
+                        "friendly_name": "Buka Absensi"
+                      },
+                      "last_changed": "2025-12-14T20:32:57.097193+00:00",
+                      "last_reported": "2025-12-14T20:32:57.097193+00:00",
+                      "last_updated": "2025-12-14T20:32:57.097193+00:00",
+                      "context": {
+                        "id": "01KCF91Z89KTB86BAB8CFW5AQG",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "input_button.buka_absensi",
+                      "state": "2025-12-14T20:36:53.537013+00:00",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:play-circle",
+                        "friendly_name": "Buka Absensi"
+                      },
+                      "last_changed": "2025-12-14T20:36:53.537050+00:00",
+                      "last_reported": "2025-12-14T20:36:53.537050+00:00",
+                      "last_updated": "2025-12-14T20:36:53.537050+00:00",
+                      "context": {
+                        "id": "01KCF99650J5679ZBZN3ABS8RQ",
+                        "parent_id": null,
+                        "user_id": "ec411308942846e6884f542218fb6183"
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of input_button.buka_absensi"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T20:36:53.537509+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCF99651MK422S1FS7YC1K3G",
+                    "parent_id": "01KCF99650J5679ZBZN3ABS8RQ",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "start_session_manual",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "buka_absensi_manual",
+            "alias": "Buka Absensi Kuliah (Manual)",
+            "mode": "single",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "input_button.buka_absensi"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.start_session_manual"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCF99651MK422S1FS7YC1K3G",
+            "parent_id": "01KCF99650J5679ZBZN3ABS8RQ",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "563441f169d8a54748d2ba8b2d9ac91f",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T20:36:53.537291+00:00",
+            "finish": "2025-12-14T20:36:53.559873+00:00"
+          },
+          "domain": "automation",
+          "item_id": "buka_absensi_manual",
+          "trigger": "state of input_button.buka_absensi"
+        }
+      }
+    ],
+    "automation.tutup_absensi_manual": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "fd5a2fea2af9d259b0705534bfe0f5d6",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T20:37:14.878562+00:00",
+            "finish": "2025-12-14T20:37:14.897161+00:00"
+          },
+          "domain": "automation",
+          "item_id": "tutup_absensi_manual",
+          "trigger": "state of input_button.tutup_absensi",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T20:37:14.878593+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.tutup_absensi_kuliah_manual",
+                    "state": "on",
+                    "attributes": {
+                      "id": "tutup_absensi_manual",
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Tutup Absensi Kuliah (Manual)"
+                    },
+                    "last_changed": "2025-12-14T20:32:57.668330+00:00",
+                    "last_reported": "2025-12-14T20:32:57.668330+00:00",
+                    "last_updated": "2025-12-14T20:32:57.668330+00:00",
+                    "context": {
+                      "id": "01KCF91ZT46DD16V85A43C3RY3",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "input_button.tutup_absensi",
+                    "from_state": {
+                      "entity_id": "input_button.tutup_absensi",
+                      "state": "unknown",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:stop-circle",
+                        "friendly_name": "Tutup Absensi"
+                      },
+                      "last_changed": "2025-12-14T20:32:57.097240+00:00",
+                      "last_reported": "2025-12-14T20:32:57.097240+00:00",
+                      "last_updated": "2025-12-14T20:32:57.097240+00:00",
+                      "context": {
+                        "id": "01KCF91Z89N5YRWDFC5K589MNJ",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "input_button.tutup_absensi",
+                      "state": "2025-12-14T20:37:14.878312+00:00",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:stop-circle",
+                        "friendly_name": "Tutup Absensi"
+                      },
+                      "last_changed": "2025-12-14T20:37:14.878348+00:00",
+                      "last_reported": "2025-12-14T20:37:14.878348+00:00",
+                      "last_updated": "2025-12-14T20:37:14.878348+00:00",
+                      "context": {
+                        "id": "01KCF99TZYTY3FP0QQMAAHMR8W",
+                        "parent_id": null,
+                        "user_id": "ec411308942846e6884f542218fb6183"
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of input_button.tutup_absensi"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T20:37:14.878740+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCF99TZYYCA3J73K9D3SMX9F",
+                    "parent_id": "01KCF99TZYTY3FP0QQMAAHMR8W",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "stop_session",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "tutup_absensi_manual",
+            "alias": "Tutup Absensi Kuliah (Manual)",
+            "mode": "single",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "input_button.tutup_absensi"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.stop_session"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCF99TZYYCA3J73K9D3SMX9F",
+            "parent_id": "01KCF99TZYTY3FP0QQMAAHMR8W",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "fd5a2fea2af9d259b0705534bfe0f5d6",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T20:37:14.878562+00:00",
+            "finish": "2025-12-14T20:37:14.897161+00:00"
+          },
+          "domain": "automation",
+          "item_id": "tutup_absensi_manual",
+          "trigger": "state of input_button.tutup_absensi"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "0be64ae6f2c8c54bfbd7d6f08804b363",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T21:01:15.221529+00:00",
+            "finish": "2025-12-14T21:01:15.231651+00:00"
+          },
+          "domain": "automation",
+          "item_id": "tutup_absensi_manual",
+          "trigger": "state of input_button.tutup_absensi",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-12-14T21:01:15.221560+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.tutup_absensi_kuliah_manual",
+                    "state": "on",
+                    "attributes": {
+                      "id": "tutup_absensi_manual",
+                      "last_triggered": "2025-12-14T20:37:14.878640+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Tutup Absensi Kuliah (Manual)"
+                    },
+                    "last_changed": "2025-12-14T20:32:57.668330+00:00",
+                    "last_reported": "2025-12-14T20:37:14.896619+00:00",
+                    "last_updated": "2025-12-14T20:37:14.896619+00:00",
+                    "context": {
+                      "id": "01KCF99TZYYCA3J73K9D3SMX9F",
+                      "parent_id": "01KCF99TZYTY3FP0QQMAAHMR8W",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "input_button.tutup_absensi",
+                    "from_state": {
+                      "entity_id": "input_button.tutup_absensi",
+                      "state": "2025-12-14T20:37:14.878312+00:00",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:stop-circle",
+                        "friendly_name": "Tutup Absensi"
+                      },
+                      "last_changed": "2025-12-14T20:37:14.878348+00:00",
+                      "last_reported": "2025-12-14T20:37:14.878348+00:00",
+                      "last_updated": "2025-12-14T20:37:14.878348+00:00",
+                      "context": {
+                        "id": "01KCF99TZYTY3FP0QQMAAHMR8W",
+                        "parent_id": null,
+                        "user_id": "ec411308942846e6884f542218fb6183"
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "input_button.tutup_absensi",
+                      "state": "2025-12-14T21:01:15.221185+00:00",
+                      "attributes": {
+                        "editable": false,
+                        "icon": "mdi:stop-circle",
+                        "friendly_name": "Tutup Absensi"
+                      },
+                      "last_changed": "2025-12-14T21:01:15.221256+00:00",
+                      "last_reported": "2025-12-14T21:01:15.221256+00:00",
+                      "last_updated": "2025-12-14T21:01:15.221256+00:00",
+                      "context": {
+                        "id": "01KCFANSJMJJBPQQPTRTYH3QD1",
+                        "parent_id": null,
+                        "user_id": "ec411308942846e6884f542218fb6183"
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of input_button.tutup_absensi"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-12-14T21:01:15.221755+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01KCFANSJN2TEHNNVDVJQF3Y4J",
+                    "parent_id": "01KCFANSJMJJBPQQPTRTYH3QD1",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "stop_session",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "tutup_absensi_manual",
+            "alias": "Tutup Absensi Kuliah (Manual)",
+            "mode": "single",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "input_button.tutup_absensi"
+              }
+            ],
+            "action": [
+              {
+                "action": "rest_command.stop_session"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01KCFANSJN2TEHNNVDVJQF3Y4J",
+            "parent_id": "01KCFANSJMJJBPQQPTRTYH3QD1",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "0be64ae6f2c8c54bfbd7d6f08804b363",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-12-14T21:01:15.221529+00:00",
+            "finish": "2025-12-14T21:01:15.231651+00:00"
+          },
+          "domain": "automation",
+          "item_id": "tutup_absensi_manual",
+          "trigger": "state of input_button.tutup_absensi"
+        }
+      }
+    ]
+  }
 }
