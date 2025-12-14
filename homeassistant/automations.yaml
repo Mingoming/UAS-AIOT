@@ -1,0 +1,47 @@
+# =========================
+# REGISTRASI RFID
+# =========================
+- id: registrasi_rfid
+  alias: Registrasi RFID Mahasiswa
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_button.register_rfid
+  condition:
+    - condition: template
+      value_template: >
+        {{ states('sensor.rfid_last_scan') not in ['unknown','unavailable','', None] }}
+  action:
+    - service: rest_command.register_rfid
+
+# =========================
+# MANUAL DEMO DOSEN
+# =========================
+- id: buka_absensi_manual
+  alias: Buka Absensi Kuliah (Manual)
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_button.buka_absensi
+  action:
+    - service: rest_command.start_session_manual
+
+- id: tutup_absensi_manual
+  alias: Tutup Absensi Kuliah (Manual)
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_button.tutup_absensi
+  action:
+    - service: rest_command.stop_session
+
+# =========================
+# AUTO JADWAL (AMAN, TIDAK GANGGU DEMO)
+# =========================
+- id: auto_buka_absensi_d201
+  alias: Auto Buka Absensi D201
+  trigger:
+    - platform: time_pattern
+      minutes: "/1"
+  action:
+    - service: rest_command.auto_start_session_d201

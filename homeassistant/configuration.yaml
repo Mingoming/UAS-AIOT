@@ -1,0 +1,153 @@
+# =========================
+# DEFAULT
+# =========================
+default_config:
+
+homeassistant:
+  time_zone: Asia/Makassar
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# =========================
+# MQTT SENSOR
+# =========================
+mqtt:
+  sensor:
+    - name: "RFID Last Scan"
+      state_topic: "smartcount/rfid/scan"
+      value_template: "{{ value_json.uid }}"
+    - name: "RFID Device"
+      state_topic: "smartcount/rfid/scan"
+      value_template: "{{ value_json.device }}"
+
+# =========================
+# INPUT
+# =========================
+input_text:
+  reg_nim:
+    name: NIM Mahasiswa
+  reg_nama:
+    name: Nama Mahasiswa
+
+input_select:
+  mata_kuliah:
+    name: Mata Kuliah Aktif
+    options:
+      - DEMO MANUAL
+      - Aplikasi IoT
+      - Riset Operasional
+      - Pemrograman Berorientasi Objek
+
+input_button:
+  register_rfid:
+    name: Daftarkan RFID
+    icon: mdi:card-account-details
+
+  buka_absensi:
+    name: Buka Absensi
+    icon: mdi:play-circle
+
+  tutup_absensi:
+    name: Tutup Absensi
+    icon: mdi:stop-circle
+
+# =========================
+# REST COMMAND (SATU BLOK SAJA)
+# =========================
+rest_command:
+  register_rfid:
+    url: "http://host.docker.internal:5000/register"
+    method: POST
+    headers:
+      Content-Type: application/json
+    payload: >
+      {
+        "uid": "{{ states('sensor.rfid_last_scan') }}",
+        "nim": "{{ states('input_text.reg_nim') }}",
+        "nama": "{{ states('input_text.reg_nama') }}"
+      }
+
+  start_session_manual:
+    url: "http://host.docker.internal:5000/session/start"
+    method: POST
+    headers:
+      Content-Type: application/json
+    payload: >
+      {
+        "mata_kuliah": "{{ states('input_select.mata_kuliah') }}"
+      }
+
+  auto_start_session_d201:
+    url: "http://host.docker.internal:5000/session/auto/d201"
+    method: POST
+
+  stop_session:
+    url: "http://host.docker.internal:5000/session/stop"
+    method: POST
+
+# =========================
+# REST SENSOR
+# =========================
+sensor:
+  - platform: rest
+    name: "Registrasi RFID"
+    resource: "http://host.docker.internal:5000/register/status"
+    value_template: "{{ value_json.status }}"
+    json_attributes:
+      - message
+      - uid
+      - nim
+      - nama
+      - waktu
+    scan_interval: 2
+
+  - platform: rest
+    name: "Total Absensi Unik"
+    resource: "http://host.docker.internal:5000/attendance/unique/session"
+    value_template: "{{ value_json.total | default(0) }}"
+    scan_interval: 5
+
+  - platform: rest
+    name: "Status Absensi"
+    resource: "http://host.docker.internal:5000/session/status"
+    value_template: >
+      {{ 'AKTIF' if value_json.aktif else 'TUTUP' }}
+    json_attributes:
+      - mata_kuliah
+      - waktu_mulai
+      - mode
+    scan_interval: 5
+
+  - platform: rest
+    name: "Daftar Absensi Sesi"
+    resource: "http://host.docker.internal:5000/attendance/list/session"
+    value_template: "{{ value_json.total }}"
+    json_attributes:
+      - data
+    scan_interval: 5
+
+# =========================
+# TEMPLATE SENSOR
+# =========================
+template:
+  - sensor:
+      - name: "Jam Mulai Absensi"
+        state: >
+          {% set t = state_attr('sensor.status_absensi', 'waktu_mulai') %}
+          {% if t not in [None, '-', ''] %}
+            {{ strptime(t, '%Y-%m-%d %H:%M:%S').strftime('%H:%M') }}
+          {% else %}
+            -
+          {% endif %}
+
+# =========================
+# LOVELACE (DASHBOARD) MODE
+# =========================
+lovelace:
+  mode: yaml
+  resources: [] # Isi ini jika nanti pakai custom cards

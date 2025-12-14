@@ -1,0 +1,23 @@
+# 1. Ignore Virtual Environment (PENTING!)
+venv/
+env/
+.env
+
+# 2. Ignore Python Cache (Sampah generate otomatis)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 3. Ignore Database Asli (Privasi & Binary file)
+*.db
+*.sqlite3
+backend/smartcount.db
+rfid.db
+
+# 4. Ignore System Files
+.DS_Store
+Thumbs.db
+
+# 5. Ignore IDE Config
+.vscode/
+.idea/

@@ -1,0 +1,157 @@
+views:
+  - title: Home
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Monitoring RFID
+            heading_style: title
+          - type: tile
+            grid_options:
+              columns: full
+              rows: 1
+            entity: sensor.rfid_last_scan
+            vertical: true
+            features_position: bottom
+      - type: grid
+        cards:
+          - type: heading
+            heading: Registrasi Mahasiswa
+            heading_style: title
+            badges: []
+            icon: ""
+            grid_options:
+              columns: 12
+              rows: 1
+          - type: tile
+            entity: input_text.reg_nim
+            vertical: false
+            features_position: bottom
+            grid_options:
+              columns: full
+              rows: 1
+          - type: tile
+            entity: input_text.reg_nama
+            vertical: false
+            features_position: bottom
+            grid_options:
+              columns: full
+          - type: tile
+            grid_options:
+              columns: full
+            entity: sensor.rfid_last_scan
+            name: UID Terbaca
+            icon: mdi:card-account-details-outline
+            vertical: false
+            features_position: bottom
+          - type: tile
+            grid_options:
+              columns: full
+            entity: input_button.register_rfid
+            icon: mdi:account-plus
+            vertical: false
+            features_position: bottom
+        column_span: 1
+      - type: grid
+        cards:
+          - type: heading
+            heading: Status Registrasi
+            heading_style: title
+          - type: tile
+            grid_options:
+              columns: full
+            entity: sensor.registrasi_rfid
+            name: Status Registrasi
+            icon: mdi:check-circle-outline
+            vertical: false
+            features_position: bottom
+          - type: entity
+            entity: automation.registrasi_rfid_mahasiswa
+            name: Pesan Registrasi
+            icon: mdi:message-text
+            grid_options:
+              columns: full
+            state_color: false
+      - type: grid
+        cards:
+          - type: heading
+            heading: Statistik
+            heading_style: title
+          - type: tile
+            grid_options:
+              columns: full
+            entity: sensor.total_absensi_unik
+            name: Total Absensi
+            vertical: false
+            features_position: bottom
+          - type: markdown
+            title: Daftar Mahasiswa Hadir
+            content: >
+              {% set data = state_attr('sensor.daftar_absensi_sesi', 'data') %}
+              {% if data %} {% for m in data %} **{{ m.nim }}** {{ m.nama }}
+                {{ (as_timestamp(strptime(m.waktu, '%Y-%m-%d %H:%M:%S')) + 8*3600)
+                     | timestamp_custom('%H:%M') }}
+              {% endfor %} {% else %} Belum ada mahasiswa hadir {% endif %}
+      - type: grid
+        cards:
+          - type: heading
+            heading: Kontrol Dosen
+            heading_style: title
+          - type: tile
+            entity: input_select.mata_kuliah
+            vertical: false
+            features_position: bottom
+            grid_options:
+              columns: full
+          - type: tile
+            entity: input_button.buka_absensi
+          - type: tile
+            entity: input_button.tutup_absensi
+      - type: grid
+        cards:
+          - type: heading
+            heading: Status Sesi
+            heading_style: title
+          - type: entity
+            entity: sensor.status_absensi
+            attribute: mata_kuliah
+            name: Mata Kuliah Aktif
+            grid_options:
+              columns: full
+          - type: entity
+            entity: sensor.status_absensi
+            name: Status Absensi
+          - type: entity
+            entity: sensor.jam_mulai_absensi
+            name: Jam Mulai Absensi
+      - type: grid
+        cards:
+          - type: heading
+            heading: Jadwal
+            heading_style: title
+          - type: markdown
+            title: Jadwal Ruang D201 Hari Ini
+            content: >
+              {% set data = state_attr('sensor.timeline_d201', 'data') %} {% if
+              data %} {% for m in data %} - {{ m.jam_mulai }}–{{ m.jam_selesai
+              }} → **{{ m.mata_kuliah }}** {% endfor %} {% else %} Tidak ada
+              jadwal hari ini {% endif %}
+      - type: grid
+        cards:
+          - type: heading
+            heading: Mode
+            heading_style: title
+          - type: entity
+            entity: sensor.status_absensi
+            attribute: mode
+            name: Mode Absensi
+            grid_options:
+              columns: full
+    header:
+      card:
+        type: markdown
+        content: >-
+          # Hello {{ user }}
+
+          Sistem SmartCount untuk Absensi Mahasiswa menggunakan Kartu Tanda
+          Penduduk

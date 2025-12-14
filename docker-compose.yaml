@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: smartcount_backend
+    # Build dari folder backend
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mapping folder lokal backend ke /app di container
+      - ./backend:/app
+      # Pastikan DB persist
+      - ./backend/smartcount.db:/app/smartcount.db
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Makassar
+
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      # Mapping folder homeassistant lokal ke config container
+      - ./homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8123:8123"
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Makassar
